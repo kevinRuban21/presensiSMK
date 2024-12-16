@@ -1,0 +1,582 @@
+INFO - 2024-12-09 06:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-09 15:30:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`presensi` = '29'
+ LIMIT 1' at line 3 in C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\presensi\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\presensi\system\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\presensi\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && pre...', Array, NULL, 'id_siswa')
+#6 C:\xampp\htdocs\presensi\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', Array, Array, 'id_siswa')
+#7 C:\xampp\htdocs\presensi\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\presensi\app\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\presensi\system\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+#10 C:\xampp\htdocs\presensi\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+#11 C:\xampp\htdocs\presensi\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\presensi\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\presensi\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\presensi\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-12-09 15:30:33 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`presensi` = '29'
+ LIMIT 1' at line 3
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = :id_siswa && presensi:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && presensi', [...], null, 'id_siswa')
+ 4 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 5 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 15:30:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`presensi` = '29'
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = \'29\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = \'29\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = :id_siswa && presensi:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && presensi', [...], null, 'id_siswa')
+ 6 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 7 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 15:30:33 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`presensi` = '29'
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = \'29\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = \'29\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = \'29\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `presensi` = :id_siswa && presensi:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && presensi', [...], null, 'id_siswa')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 8 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 06:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-09 15:34:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`tgl_presensi` = '29'
+ LIMIT 1' at line 3 in C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\presensi\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\presensi\system\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\presensi\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && tgl...', Array, NULL, 'id_siswa')
+#6 C:\xampp\htdocs\presensi\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', Array, Array, 'id_siswa')
+#7 C:\xampp\htdocs\presensi\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\presensi\app\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\presensi\system\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+#10 C:\xampp\htdocs\presensi\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+#11 C:\xampp\htdocs\presensi\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\presensi\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\presensi\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\presensi\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-12-09 15:34:44 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`tgl_presensi` = '29'
+ LIMIT 1' at line 3
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = :id_siswa && tgl_presensi:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && tgl_presensi', [...], null, 'id_siswa')
+ 4 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 5 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 15:34:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`tgl_presensi` = '29'
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = \'29\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = \'29\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = :id_siswa && tgl_presensi:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && tgl_presensi', [...], null, 'id_siswa')
+ 6 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 7 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 15:34:44 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`tgl_presensi` = '29'
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = \'29\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = \'29\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = \'29\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `presensi`
+WHERE `id_siswa &&` `tgl_presensi` = :id_siswa && tgl_presensi:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', 'id_siswa && tgl_presensi', [...], null, 'id_siswa')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 8 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 06:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 15:53:31 --> TypeError: CodeIgniter\Validation\StrictRules\Rules::is_unique(): Argument #2 ($field) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Validation\StrictRules\Rules.php on line 200.
+ 1 SYSTEMPATH\Validation\Validation.php(335): CodeIgniter\Validation\StrictRules\Rules->is_unique('29', null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 06:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 06:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:24:02 --> CodeIgniter\Validation\Exceptions\ValidationException: "uniquePresence" is not a valid rule.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Validation\Validation.php on line 345.
+ 1 SYSTEMPATH\Validation\Validation.php(345): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('uniquePresence')
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '24', [...], [...], 'id_siswa')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 07:35:08 --> ArgumentCountError: Too few arguments to function App\Validation\CustomRules::__construct(), 0 passed in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 724 and exactly 1 expected
+[Method: GET, Route: PresensiMasuk]
+in APPPATH\Validation\CustomRules.php on line 11.
+ 1 SYSTEMPATH\Validation\Validation.php(724): App\Validation\CustomRules->__construct()
+ 2 SYSTEMPATH\Validation\Validation.php(125): CodeIgniter\Validation\Validation->loadRuleSets()
+ 3 SYSTEMPATH\Config\Services.php(826): CodeIgniter\Validation\Validation->__construct(Object(Config\Validation), Object(CodeIgniter\View\View))
+ 4 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::validation(Object(Config\Validation), false)
+ 5 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+ 6 SYSTEMPATH\Config\Services.php(821): CodeIgniter\Config\BaseService::getSharedInstance('validation', null)
+ 7 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::validation()
+ 8 APPPATH\Views\scan\v_scan_masuk.php(92): CodeIgniter\Config\BaseService::__callStatic('validation', [])
+ 9 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\scan\\v_scan_masuk.php')
+10 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scan/v_scan_masuk', [], true)
+12 APPPATH\Controllers\PresensiMasuk.php(27): view('scan/v_scan_masuk', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->index()
+14 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+15 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:35:45 --> TypeError: App\Validation\CustomRules::uniquePresence(): Argument #2 ($field) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 9.
+ 1 SYSTEMPATH\Validation\Validation.php(335): App\Validation\CustomRules->uniquePresence('24', null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '24', [...], [...], 'id_siswa')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:39:24 --> TypeError: App\Validation\CustomRules::uniquePresence(): Argument #2 ($field) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 10.
+ 1 SYSTEMPATH\Validation\Validation.php(335): App\Validation\CustomRules->uniquePresence('24', null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '24', [...], [...], 'id_siswa')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:39:42 --> TypeError: App\Validation\CustomRules::uniquePresence(): Argument #2 ($field) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 10.
+ 1 SYSTEMPATH\Validation\Validation.php(335): App\Validation\CustomRules->uniquePresence('29', null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:45:09 --> ErrorException: Undefined array key "tgl_presensi"
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 17.
+ 1 APPPATH\Validation\CustomRules.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl_presensi"', 'C:\\xampp\\htdocs\\presensi\\app\\Validation\\CustomRules.php', 17)
+ 2 SYSTEMPATH\Validation\Validation.php(336): App\Validation\CustomRules->uniquePresence('24', 'id_siswa', [...], null, 'id_siswa')
+ 3 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '24', [...], [...], 'id_siswa')
+ 4 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 5 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:49:11 --> ErrorException: Undefined array key "tgl_presensi"
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 17.
+ 1 APPPATH\Validation\CustomRules.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl_presensi"', 'C:\\xampp\\htdocs\\presensi\\app\\Validation\\CustomRules.php', 17)
+ 2 SYSTEMPATH\Validation\Validation.php(336): App\Validation\CustomRules->uniquePresence('29', 'id_siswa', [...], null, 'id_siswa')
+ 3 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '29', [...], [...], 'id_siswa')
+ 4 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 5 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:52:25 --> TypeError: App\Validation\CustomRules::uniquePresence(): Argument #2 ($field) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 7.
+ 1 SYSTEMPATH\Validation\Validation.php(335): App\Validation\CustomRules->uniquePresence('24', null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_siswa', 'id_siswa', '24', [...], [...], 'id_siswa')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 16:54:19 --> TypeError: App\Validation\CustomRules::uniquePresence(): Argument #1 ($str) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 7.
+ 1 SYSTEMPATH\Validation\Validation.php(335): App\Validation\CustomRules->uniquePresence(null, null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('uniquePresence', 'uniquePresence', null, [...], [...], 'uniquePresence')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 16:54:30 --> TypeError: App\Validation\CustomRules::uniquePresence(): Argument #1 ($str) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 7.
+ 1 SYSTEMPATH\Validation\Validation.php(335): App\Validation\CustomRules->uniquePresence(null, null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('uniquePresence', 'uniquePresence', null, [...], [...], 'uniquePresence')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 16:54:33 --> TypeError: App\Validation\CustomRules::uniquePresence(): Argument #1 ($str) must be of type string, null given, called in C:\xampp\htdocs\presensi\system\Validation\Validation.php on line 335
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Validation\CustomRules.php on line 7.
+ 1 SYSTEMPATH\Validation\Validation.php(335): App\Validation\CustomRules->uniquePresence(null, null)
+ 2 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('uniquePresence', 'uniquePresence', null, [...], [...], 'uniquePresence')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\PresensiMasuk.php(44): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-09 07:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 07:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 16:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 21:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-09 22:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-09 23:12:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_print_presensi.php"
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_print_presensi.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_print_presensi', [], true)
+ 3 APPPATH\Controllers\DaftarPresensi.php(71): view('v_print_presensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 23:13:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_print_presensi.php"
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_print_presensi.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_print_presensi', [], true)
+ 3 APPPATH\Controllers\DaftarPresensi.php(71): view('v_print_presensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 23:15:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_print_presensi.php"
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_print_presensi.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_print_presensi', [], true)
+ 3 APPPATH\Controllers\DaftarPresensi.php(71): view('v_print_presensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 23:15:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_print_presensi.php"
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_print_presensi.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_print_presensi', [], true)
+ 3 APPPATH\Controllers\DaftarPresensi.php(71): view('v_print_presensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 23:17:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_print_presensi.php"
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_print_presensi.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_print_presensi', [], true)
+ 3 APPPATH\Controllers\DaftarPresensi.php(68): view('v_print_presensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-09 23:18:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_print_presensi.php"
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_print_presensi.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_print_presensi', [], true)
+ 3 APPPATH\Controllers\DaftarPresensi.php(68): view('v_print_presensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensi()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

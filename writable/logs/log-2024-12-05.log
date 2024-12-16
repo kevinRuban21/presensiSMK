@@ -1,0 +1,489 @@
+CRITICAL - 2024-12-05 06:35:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "scan/v_scan_pulang.php"
+[Method: GET, Route: PresensiPulang]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('scan/v_scan_pulang.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scan/v_scan_pulang', [], true)
+ 3 APPPATH\Controllers\PresensiPulang.php(17): view('scan/v_scan_pulang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiPulang->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiPulang))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 06:35:47 --> ErrorException: Undefined variable $judul
+[Method: GET, Route: PresensiPulang]
+in APPPATH\Views\v_front-end.php on line 8.
+ 1 APPPATH\Views\v_front-end.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\v_front-end.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_front-end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_front-end', [], true)
+ 5 APPPATH\Controllers\PresensiPulang.php(18): view('v_front-end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiPulang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiPulang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 06:36:23 --> ErrorException: Undefined variable $sekolah
+[Method: GET, Route: PresensiPulang]
+in APPPATH\Views\v_front-end.php on line 62.
+ 1 APPPATH\Views\v_front-end.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\v_front-end.php', 62)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_front-end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_front-end', [], true)
+ 5 APPPATH\Controllers\PresensiPulang.php(19): view('v_front-end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiPulang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiPulang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 06:36:53 --> ErrorException: Undefined property: App\Controllers\PresensiPulang::$ModelSekolah
+[Method: GET, Route: PresensiPulang]
+in APPPATH\Controllers\PresensiPulang.php on line 17.
+ 1 APPPATH\Controllers\PresensiPulang.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PresensiPulang::$ModelSekolah', 'C:\\xampp\\htdocs\\presensi\\app\\Controllers\\PresensiPulang.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiPulang->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiPulang))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 06:37:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "scan/v_scan_pulang.php"
+[Method: GET, Route: PresensiPulang]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('scan/v_scan_pulang.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scan/v_scan_pulang', [], true)
+ 3 APPPATH\Views\v_front-end.php(85): view('scan/v_scan_pulang')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_front-end.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_front-end', [], true)
+ 7 APPPATH\Controllers\PresensiPulang.php(22): view('v_front-end', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiPulang->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiPulang))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 07:52:58 --> ErrorException: Undefined variable $judul
+[Method: GET, Route: PresensiMasuk]
+in APPPATH\Views\scan\v_scan_masuk.php on line 8.
+ 1 APPPATH\Views\scan\v_scan_masuk.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\scan\\v_scan_masuk.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\scan\\v_scan_masuk.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scan/v_scan_masuk', [], true)
+ 5 APPPATH\Controllers\PresensiMasuk.php(17): view('scan/v_scan_masuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-05 08:10:21 --> mysqli_sql_exception: Unknown column 'tbl_siswa.id_jurusan' in 'on clause' in C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\presensi\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\presensi\app\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\presensi\app\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+#6 C:\xampp\htdocs\presensi\system\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+#7 C:\xampp\htdocs\presensi\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+#8 C:\xampp\htdocs\presensi\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\presensi\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\presensi\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\presensi\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-12-05 08:10:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_siswa.id_jurusan' in 'on clause'
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', [], false)
+ 2 APPPATH\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 08:10:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_siswa.id_jurusan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', [], false)
+ 4 APPPATH\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 08:10:21 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_siswa.id_jurusan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`tbl_siswa`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`tbl_siswa`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', [], false)
+ 5 APPPATH\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-05 08:11:21 --> mysqli_sql_exception: Unknown column 'presensi.id_jurusan' in 'on clause' in C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\presensi\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\presensi\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\presensi\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\presensi\app\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\presensi\app\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+#6 C:\xampp\htdocs\presensi\system\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+#7 C:\xampp\htdocs\presensi\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+#8 C:\xampp\htdocs\presensi\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\presensi\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\presensi\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\presensi\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-12-05 08:11:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'presensi.id_jurusan' in 'on clause'
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', [], false)
+ 2 APPPATH\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 08:11:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'presensi.id_jurusan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', [], false)
+ 4 APPPATH\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 08:11:21 --> [Caused by] mysqli_sql_exception: Unknown column 'presensi.id_jurusan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `presensi`
+LEFT JOIN `tbl_jurusan` ON `tbl_jurusan`.`id_jurusan`=`presensi`.`id_jurusan`
+LEFT JOIN `tbl_kelas` ON `tbl_kelas`.`id_kelas`=`presensi`.`id_kelas`
+ORDER BY `id_presensi` DESC
+ LIMIT 3', [], false)
+ 5 APPPATH\Models\ModelScanMasuk.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PresensiMasuk.php(25): App\Models\ModelScanMasuk->AllDataLimit()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->PresensiBaru()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 09:01:02 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: PresensiMasuk]
+in APPPATH\Views\scan\v_scan_masuk.php on line 90.
+ 1 APPPATH\Views\scan\v_scan_masuk.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\scan\\v_scan_masuk.php', 90)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\scan\\v_scan_masuk.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scan/v_scan_masuk', [], true)
+ 5 APPPATH\Controllers\PresensiMasuk.php(19): view('scan/v_scan_masuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-05 09:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 09:02:17 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: PresensiMasuk]
+in APPPATH\Views\scan\v_scan_masuk.php on line 94.
+ 1 APPPATH\Views\scan\v_scan_masuk.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\scan\\v_scan_masuk.php', 94)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\scan\\v_scan_masuk.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scan/v_scan_masuk', [], true)
+ 5 APPPATH\Controllers\PresensiMasuk.php(19): view('scan/v_scan_masuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-05 09:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 18:07:48 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(189): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, '1')
+ 4 APPPATH\Models\ModelScanMasuk.php(30): CodeIgniter\BaseModel->find('1')
+ 5 APPPATH\Controllers\PresensiMasuk.php(39): App\Models\ModelScanMasuk->InsertData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 18:07:57 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(189): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, '2')
+ 4 APPPATH\Models\ModelScanMasuk.php(30): CodeIgniter\BaseModel->find('2')
+ 5 APPPATH\Controllers\PresensiMasuk.php(39): App\Models\ModelScanMasuk->InsertData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 18:07:57 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(189): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, '29')
+ 4 APPPATH\Models\ModelScanMasuk.php(30): CodeIgniter\BaseModel->find('29')
+ 5 APPPATH\Controllers\PresensiMasuk.php(39): App\Models\ModelScanMasuk->InsertData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 18:08:01 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(189): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(true, '2')
+ 4 APPPATH\Models\ModelScanMasuk.php(30): CodeIgniter\BaseModel->find('2')
+ 5 APPPATH\Controllers\PresensiMasuk.php(39): App\Models\ModelScanMasuk->InsertData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-05 09:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 09:47:48 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PresensiMasuk.php(34): CodeIgniter\Model->__call('select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 09:48:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PresensiMasuk.php(34): CodeIgniter\Model->__call('select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 09:48:26 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PresensiMasuk.php(34): CodeIgniter\Model->__call('select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 09:48:29 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PresensiMasuk.php(34): CodeIgniter\Model->__call('select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-05 09:48:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-05 09:48:51 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PresensiMasuk.php(34): CodeIgniter\Model->__call('select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 09:48:54 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PresensiMasuk.php(34): CodeIgniter\Model->__call('select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-05 09:48:57 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PresensiMasuk.php(34): CodeIgniter\Model->__call('select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-05 09:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 18:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 18:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 18:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 09:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 10:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-05 19:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,117 @@
+INFO - 2024-12-10 00:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 00:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 00:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-10 01:28:28 --> ErrorException: Undefined variable $id_kelas
+[Method: GET, Route: DaftarPresensi/Presensi/1]
+in APPPATH\Views\rekap\v_daftar_presensi.php on line 7.
+ 1 APPPATH\Views\rekap\v_daftar_presensi.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_kelas', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\rekap\\v_daftar_presensi.php', 7)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\rekap\\v_daftar_presensi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('rekap/v_daftar_presensi', [], true)
+ 5 APPPATH\Views\v_template.php(222): view('rekap/v_daftar_presensi')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\DaftarPresensi.php(60): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->Presensi('1')
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 01:30:07 --> ArgumentCountError: Too few arguments to function App\Controllers\DaftarPresensi::PrintDaftarPresensiKelas(), 0 passed in C:\xampp\htdocs\presensi\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensiKelas]
+in APPPATH\Controllers\DaftarPresensi.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensiKelas()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 01:30:33 --> ErrorException: Undefined variable $id_kelas
+[Method: GET, Route: DaftarPresensi/Presensi/1]
+in APPPATH\Views\rekap\v_daftar_presensi.php on line 7.
+ 1 APPPATH\Views\rekap\v_daftar_presensi.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_kelas', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\rekap\\v_daftar_presensi.php', 7)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\rekap\\v_daftar_presensi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('rekap/v_daftar_presensi', [], true)
+ 5 APPPATH\Views\v_template.php(222): view('rekap/v_daftar_presensi')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\DaftarPresensi.php(60): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->Presensi('1')
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 01:33:44 --> ErrorException: Undefined variable $daftar_presensi
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensiKelas]
+in APPPATH\Views\rekap\v_print_presensi.php on line 86.
+ 1 APPPATH\Views\rekap\v_print_presensi.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_presensi', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\rekap\\v_print_presensi.php', 86)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\rekap\\v_print_presensi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('rekap/v_print_presensi', [], true)
+ 5 APPPATH\Controllers\DaftarPresensi.php(80): view('rekap/v_print_presensi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensiKelas()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 01:34:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "rekap/v_print_presensi_kelas.php"
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensiKelas]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('rekap/v_print_presensi_kelas.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('rekap/v_print_presensi_kelas', [], true)
+ 3 APPPATH\Controllers\DaftarPresensi.php(80): view('rekap/v_print_presensi_kelas', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensiKelas()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-10 01:36:03 --> ArgumentCountError: Too few arguments to function App\Controllers\DaftarPresensi::PrintDaftarPresensiKelas(), 0 passed in C:\xampp\htdocs\presensi\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: DaftarPresensi/PrintDaftarPresensiKelas]
+in APPPATH\Controllers\DaftarPresensi.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarPresensi->PrintDaftarPresensiKelas()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarPresensi))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-10 02:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 02:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-10 03:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

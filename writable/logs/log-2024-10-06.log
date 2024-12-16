@@ -1,0 +1,264 @@
+INFO - 2024-10-06 01:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 01:36:30 --> ErrorException: Undefined variable $d
+[Method: GET, Route: Siswa]
+in APPPATH\Views\siswa\v_index.php on line 58.
+ 1 APPPATH\Views\siswa\v_index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $d', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\siswa\\v_index.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\siswa\\v_index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa/v_index', [], true)
+ 5 APPPATH\Views\v_template.php(135): view('siswa/v_index')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Siswa.php(16): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->index()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 01:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 01:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 02:16:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "v_template_admin.php"
+[Method: GET, Route: Siswa/Input]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_template_admin.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_admin', [], true)
+ 3 APPPATH\Controllers\Siswa.php(35): view('v_template_admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->Input()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-06 02:17:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa/v_input.php"
+[Method: GET, Route: Siswa/Input]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa/v_input.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa/v_input', [], true)
+ 3 APPPATH\Views\v_template.php(141): view('siswa/v_input')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_template.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template', [], true)
+ 7 APPPATH\Controllers\Siswa.php(35): view('v_template', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->Input()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-06 02:17:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa/v_input.php"
+[Method: GET, Route: Siswa/Input]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa/v_input.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa/v_input', [], true)
+ 3 APPPATH\Views\v_template.php(141): view('siswa/v_input')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_template.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template', [], true)
+ 7 APPPATH\Controllers\Siswa.php(35): view('v_template', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->Input()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 02:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 02:18:25 --> Error: Call to undefined function form_open_multipart()
+[Method: GET, Route: Siswa/Input]
+in APPPATH\Views\siswa\v_input.php on line 14.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa/v_input', [], true)
+ 4 APPPATH\Views\v_template.php(141): view('siswa/v_input')
+ 5 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_template.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template', [], true)
+ 8 APPPATH\Controllers\Siswa.php(35): view('v_template', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->Input()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 02:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 02:19:10 --> ErrorException: Undefined variable $jurusan
+[Method: GET, Route: Siswa/Input]
+in APPPATH\Views\siswa\v_input.php on line 55.
+ 1 APPPATH\Views\siswa\v_input.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jurusan', 'C:\\xampp\\htdocs\\presensi\\app\\Views\\siswa\\v_input.php', 55)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\siswa\\v_input.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa/v_input', [], true)
+ 5 APPPATH\Views\v_template.php(141): view('siswa/v_input')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\presensi\\app\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Siswa.php(35): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->Input()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 02:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 02:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 03:07:22 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+[Method: POST, Route: Siswa/InsertData]
+in VENDORPATH\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label), [...])
+ 2 APPPATH\Controllers\Siswa.php(70): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->InsertData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 03:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 03:14:57 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+[Method: POST, Route: Siswa/InsertData]
+in VENDORPATH\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label), [...])
+ 2 APPPATH\Controllers\Siswa.php(69): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->InsertData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 03:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 03:18:23 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+[Method: POST, Route: Siswa/InsertData]
+in VENDORPATH\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label), [...])
+ 2 APPPATH\Controllers\Siswa.php(69): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->InsertData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 03:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-06 03:29:43 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+[Method: POST, Route: Siswa/InsertData]
+in VENDORPATH\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 33.
+ 1 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label), [...])
+ 2 APPPATH\Controllers\Siswa.php(69): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Siswa->InsertData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-06 03:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 03:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 04:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 05:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 05:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 05:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 05:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-06 05:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

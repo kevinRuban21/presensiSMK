@@ -1,0 +1,252 @@
+INFO - 2024-12-08 01:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 01:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 02:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 02:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 12:13:10 --> ErrorException: foreach() argument must be of type array|object, string given
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Controllers\PresensiMasuk.php on line 65.
+ 1 APPPATH\Controllers\PresensiMasuk.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\presensi\\app\\Controllers\\PresensiMasuk.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 03:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 03:22:07 --> ArgumentCountError: Too few arguments to function App\Controllers\KirimPesan::PesanWa(), 0 passed in C:\xampp\htdocs\presensi\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: KirimPesan/PesanWa]
+in APPPATH\Controllers\KirimPesan.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KirimPesan->PesanWa()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KirimPesan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:22:53 --> ArgumentCountError: Too few arguments to function App\Controllers\KirimPesan::PesanWa(), 0 passed in C:\xampp\htdocs\presensi\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: KirimPesan/PesanWa]
+in APPPATH\Controllers\KirimPesan.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KirimPesan->PesanWa()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KirimPesan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 03:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 03:25:29 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: KirimPesan/PesanWa/24]
+in APPPATH\Controllers\KirimPesan.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KirimPesan->PesanWa('24')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KirimPesan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:34:23 --> ParseError: Unclosed '{' on line 11
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 100.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:35:22 --> ParseError: Unclosed '{' on line 11
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 100.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 03:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 03:43:12 --> ParseError: syntax error, unexpected variable "$curl"
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 66.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:43:13 --> ParseError: syntax error, unexpected variable "$curl"
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 66.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:43:16 --> ParseError: syntax error, unexpected variable "$curl"
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 66.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:43:17 --> ParseError: syntax error, unexpected variable "$curl"
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 66.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:43:19 --> ParseError: syntax error, unexpected variable "$curl"
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 66.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:43:20 --> ParseError: syntax error, unexpected variable "$curl"
+[Method: GET, Route: PresensiMasuk]
+in APPPATH\Controllers\PresensiMasuk.php on line 66.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 03:43:22 --> ParseError: syntax error, unexpected variable "$curl"
+[Method: GET, Route: PresensiMasuk/PresensiBaru]
+in APPPATH\Controllers\PresensiMasuk.php on line 66.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('PresensiMasuk/PresensiBaru', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('PresensiMasuk/PresensiBaru')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('PresensiMasuk/PresensiBaru')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 03:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 12:45:35 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Controllers\PresensiMasuk.php on line 65.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 03:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 12:52:52 --> ErrorException: Undefined array key "nama_ortu"
+[Method: POST, Route: PresensiMasuk/SimpanData]
+in APPPATH\Controllers\PresensiMasuk.php on line 65.
+ 1 APPPATH\Controllers\PresensiMasuk.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_ortu"', 'C:\\xampp\\htdocs\\presensi\\app\\Controllers\\PresensiMasuk.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PresensiMasuk->SimpanData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PresensiMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 03:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 03:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 04:03:46 --> ErrorException: Undefined array key "id_siswa"
+[Method: GET, Route: KirimPesan/PesanWa]
+in APPPATH\Controllers\KirimPesan.php on line 33.
+ 1 APPPATH\Controllers\KirimPesan.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_siswa"', 'C:\\xampp\\htdocs\\presensi\\app\\Controllers\\KirimPesan.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KirimPesan->PesanWa()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KirimPesan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-08 04:04:04 --> ErrorException: Undefined array key "id_siswa"
+[Method: GET, Route: KirimPesan/PesanWa]
+in APPPATH\Controllers\KirimPesan.php on line 33.
+ 1 APPPATH\Controllers\KirimPesan.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_siswa"', 'C:\\xampp\\htdocs\\presensi\\app\\Controllers\\KirimPesan.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KirimPesan->PesanWa()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KirimPesan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 04:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-08 04:05:00 --> ErrorException: Undefined array key "id_siswa"
+[Method: GET, Route: KirimPesan/PesanWa]
+in APPPATH\Controllers\KirimPesan.php on line 33.
+ 1 APPPATH\Controllers\KirimPesan.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_siswa"', 'C:\\xampp\\htdocs\\presensi\\app\\Controllers\\KirimPesan.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KirimPesan->PesanWa()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KirimPesan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-08 04:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 04:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-08 23:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
