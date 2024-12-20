@@ -239,4 +239,16 @@ class Siswa extends BaseController
         session()->setFlashdata('delete', 'Data Berhasil Dihapus');
         return redirect()->to('siswa');
     }
+
+    public function KartuSiswa($id_siswa)
+    {
+        $data = [
+            'judul' => 'Master Data',
+            'subjudul' => 'Kartu Siswa',
+            'menu' => 'master-data',
+            'submenu' => 'siswa',
+            'siswa' => $this->ModelSiswa->DetailData($id_siswa),
+        ];
+        return view('siswa/v_kartuSiswa', $data);
+    }
 }

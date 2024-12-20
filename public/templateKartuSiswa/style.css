@@ -1,0 +1,38 @@
+.card {
+  background-image: url(img/templateCard.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 390px;
+  height: 550px;
+}
+.card-title {
+  font-family: "Viga", serif !important;
+}
+
+.card-body {
+  position: relative;
+}
+
+.nama {
+  position: absolute;
+  top: 394px;
+  right: 20px;
+}
+
+.nisn {
+  position: absolute;
+  top: 430px;
+  right: 45px;
+}
+
+.nipd {
+  position: absolute;
+  top: 465px;
+  right: 45px;
+}
+
+.qrCode {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+}

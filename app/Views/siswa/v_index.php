@@ -84,10 +84,18 @@
                                     <?php } ?>  
                                 </td>
                                 <td class="text-center">
+                                <?php if ($d['qr'] == '') { ?>
                                     <div class="btn-group">
                                         <a href="<?= base_url('Siswa/Edit/' . $d['id_siswa']) ?>" class="btn btn-warning btn-sm mr-2 ml-2"><i class="fas fa-pencil-alt"></i></a>
                                         <a href="<?= base_url('Siswa/DeleteData/' . $d['id_siswa']) ?>" onclick="return confirm('Yakin Ingin Menghapus Data Ini')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                     </div>
+                                <?php } else { ?>
+                                    <div class="btn-group">
+                                        <a href="<?= base_url('Siswa/KartuSiswa/' . $d['id_siswa']) ?>" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>
+                                        <a href="<?= base_url('Siswa/Edit/' . $d['id_siswa']) ?>" class="btn btn-warning btn-sm mr-2 ml-2"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="<?= base_url('Siswa/DeleteData/' . $d['id_siswa']) ?>" onclick="return confirm('Yakin Ingin Menghapus Data Ini')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                    </div>
+                                <?php } ?>
                                 </td>
 
                             </tr>  
