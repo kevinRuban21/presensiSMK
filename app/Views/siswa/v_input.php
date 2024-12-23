@@ -1,56 +1,46 @@
-<div class="col-md-12">
-          <div class="card card-outline card-info">
-            <div class="card-header">
-              <h3 class="card-title">
-                <?= $subjudul ?>
-              </h3>
+<div class="row">
+        <div class="card">
+            <div class="card-header d-flex">
+                <div class="card-title"><?= $submenu ?></div>
             </div>
-            <div class="card-body">
-            <?php
-              if(session()->get('error')){
-                echo '<div class="alert alert-info" role="alert">';
-                echo session()->get('error');
-                echo '</div>';
-              }
-           ?>
-            <form id="input_siswa_form" action="#" method="post">
-                <div class="form-group">
-                    <label>NIPD</label>
-                    <input name="nipd" class="form-control" placeholder="NIPD">
+            <form id="input_siswa_form" action="#" method="post" autocomplete="off">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>NIPD</label>
+                        <input name="nipd" class="form-control" placeholder="NIPD">
+                    </div>
+                    <div class="form-group">
+                        <label>NISN</label>
+                        <input name="nisn" class="form-control" placeholder="NISN">
+                    <div class="form-group">
+                        <label>Nama Siswa</label>
+                        <input name="nama_siswa" class="form-control" placeholder="Nama Siswa">
+                    </div>
+                    <div class="form-group">
+                            <label>Jurusan</label>
+                            <select name="id_jurusan" class="form-control">
+                                <option value="">--Pilih jurusan--</option>
+                                <?php foreach ($jurusan as $key => $k) { ?>
+                                    <option value="<?= $k['id_jurusan'] ?>"><?= $k['jurusan'] ?></option>
+                                <?php }  ?>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Orang Tua</label>
+                        <input name="nama_ortu" class="form-control" placeholder="Nama Orang Tua">
+                    </div>
+                    <div class="form-group">
+                        <label>No Telepon Orang Tua</label>
+                        <input name="telp_ortu" class="form-control" placeholder="No Telepon Orang Tua">
+                    </div>
+                    <div class="card-action">
+                        <button class="btn btn-secondary me-2">Submit</button>
+                        <a href="<?= base_url('Siswa') ?>" class="btn btn-danger">Kembali</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>NISN</label>
-                    <input name="nisn" class="form-control" placeholder="NISN">
-                <div class="form-group">
-                    <label>Nama Siswa</label>
-                    <input name="nama_siswa" class="form-control" placeholder="Nama Siswa">
-                </div>
-                <div class="form-group">
-                        <label>Jurusan</label>
-                        <select name="id_jurusan" class="form-control">
-                            <option value="">--Pilih jurusan--</option>
-                            <?php foreach ($jurusan as $key => $k) { ?>
-                                <option value="<?= $k['id_jurusan'] ?>"><?= $k['jurusan'] ?></option>
-                            <?php }  ?>
-                        </select>
-                </div>
-                <div class="form-group">
-                    <label>Nama Orang Tua</label>
-                    <input name="nama_ortu" class="form-control" placeholder="Nama Orang Tua">
-                </div>
-                <div class="form-group">
-                    <label>No Telepon Orang Tua</label>
-                    <input name="telp_ortu" class="form-control" placeholder="No Telepon Orang Tua">
-                </div>
-              </div>
-              <div class="card-footer">
-                <button type="submit" class="btn btn-info"><i class="fas fa-save"></i> Simpan</button>
-                <a href="<?= base_url('Siswa') ?>" class="btn btn-danger"><i class="fas fa-arrow-alt-circle-left"></i> Kembali</a>
-              </div>
             </form>
           </div>
-        </div>
-        <!-- /.col-->
+</div>
 
         <script>
           $(document).ready(function() {
@@ -78,7 +68,7 @@
                                 icon: 'success',
                                 title: 'Berhasil',
                                 text: 'Data berhasil disimpan!',
-                                timer: 700,
+                                timer: 1000,
                             });
                         }
                     }

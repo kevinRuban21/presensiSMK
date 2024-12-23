@@ -19,9 +19,22 @@ class Kelas extends BaseController
             'judul' => 'Master Data',
             'subjudul' => 'Kelas',
             'menu' => 'master-data',
-            'submenu' => 'kelas',
+            'submenu' => 'Data Jurusan',
             'page' => 'kelas/v_index',
             'jurusan' => $this->ModelJurusan->AllData(),
+        ];
+        return view('v_template', $data);
+    }
+
+    public function TmbhKelas($id_jurusan)
+    {
+        $data = [
+            'judul' => 'Master Data',
+            'subjudul' => 'Kelas',
+            'menu' => 'master-data',
+            'submenu' => 'Tambah Kelas',
+            'page' => 'kelas/v_tmbhDataKelas',
+            'jurusan' => $this->ModelJurusan->DetailData($id_jurusan),
         ];
         return view('v_template', $data);
     }
@@ -31,9 +44,9 @@ class Kelas extends BaseController
     {
         $data = [
             'judul' => 'Master Data',
-            'subjudul' => 'Detail Kelas',
+            'subjudul' => 'Kelas',
             'menu' => 'master-data',
-            'submenu' => 'kelas',
+            'submenu' => 'Detail Kelas',
             'page' => 'kelas/v_detail_kelas',
             'jurusan' => $this->ModelJurusan->DetailData($id_jurusan),
             'kelas' => $this->ModelKelas->AllDataKelas($id_jurusan),
@@ -42,25 +55,70 @@ class Kelas extends BaseController
     }
 
     public function InsertData($id_jurusan){
+        $validate = $this->validate([
+            'kelas' =>[
+                'label' => 'Kelas',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Tidak Boleh Kosong !!!',   
+                ]
+            ],
+        ]);
+        
+        if(!$validate){
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+
         $data = [
             'kelas' => $this->request->getPost('kelas'),
             'id_jurusan' => $id_jurusan,
         ];
         $this->ModelKelas->InsertData($data);
-        session()->setFlashdata('insert', 'Data Berhasil Ditambahkan !!!');
-        return redirect()->to('Kelas/Detail/' . $id_jurusan);
 
     }
 
-    public function UpdateData($id_jurusan, $id_kelas){
+    public function EditKelas($id_jurusan, $id_kelas)
+    {
+        $data = [
+            'judul' => 'Master Data',
+            'subjudul' => 'Kelas',
+            'menu' => 'master-data',
+            'submenu' => 'Edit Data Kelas',
+            'page' => 'kelas/v_editDataKelas',
+            'jurusan' => $this->ModelJurusan->DetailData($id_jurusan),
+            'kelas' => $this->ModelKelas->DetailKelas($id_kelas),
+        ];
+        return view('v_template', $data);
+    }
+
+    public function UpdateData($id_jurusan, $id_kelas)
+    {
+        $validate = $this->validate([
+            'kelas' =>[
+                'label' => 'Kelas',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Tidak Boleh Kosong !!!',   
+                ]
+            ],
+        ]);
+        
+        if(!$validate){
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+
         $data = [
             'id_kelas' => $id_kelas,
             'kelas' => $this->request->getPost('kelas'),
             'id_jurusan' => $id_jurusan,
         ];
         $this->ModelKelas->UpdateData($data);
-        session()->setFlashdata('insert', 'Data Berhasil Diubah !!!');
-        return redirect()->to('Kelas/Detail/' . $id_jurusan);
 
     }
 
@@ -78,9 +136,9 @@ class Kelas extends BaseController
     {
         $data = [
             'judul' => 'Master Data',
-            'subjudul' => 'Rincian Kelas',
+            'subjudul' => 'Kelas',
             'menu' => 'master-data',
-            'submenu' => 'kelas',
+            'submenu' => 'Rincian Kelas',
             'page' => 'kelas/v_rincian_kelas',
             'kelas' => $this->ModelKelas->DetailKelas($id_kelas),
             'siswa' => $this->ModelKelas->DataSiswa($id_kelas),

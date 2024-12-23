@@ -1,58 +1,12 @@
-<div class="col-md-12">
-            <div class="card card-outline card-info">
-              <div class="card-header">
-                <h3 class="card-title"><?= $subjudul ?></h3>
-
-                
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <?php
-
-                                use CodeIgniter\Database\BaseUtils;
-
-                    if(session()->get('insert')){
-                        echo '<div class="alert alert-success">';
-                        echo session()->get('insert');
-                        echo '</div>';
-                        echo '<script>
-                            $(document).ready(function(){
-                                $(".alert").fadeIn();
-                                setTimeout(function(){
-                                    $(".alert").fadeOut();
-                                }, 3000);
-                            });
-                        </script>';
-                    }
-                    if(session()->get('update')){
-                        echo '<div class="alert alert-success">';
-                        echo session()->get('update');
-                        echo '</div>';
-                        echo '<script>
-                            $(document).ready(function(){
-                                $(".alert").fadeIn();
-                                setTimeout(function(){
-                                    $(".alert").fadeOut();
-                                }, 3000);
-                            });
-                        </script>';
-                    }
-                    if(session()->get('delete')){
-                        echo '<div class="alert alert-danger">';
-                        echo session()->get('delete');
-                        echo '</div>';
-                        echo '<script>
-                            $(document).ready(function(){
-                                $(".alert").fadeIn();
-                                setTimeout(function(){
-                                    $(".alert").fadeOut();
-                                }, 3000);
-                            });
-                        </script>';
-                    }
-                ?>
-                <table class="table table-bordered table-sm">
+<div class="row">
+        <div class="card">
+            <div class="card-header d-flex">
+                <div class="card-title"><?= $submenu ?></div>
+                <div class="card-tools ms-auto">
+                </div>
+            </div>
+            <div class="card-body table-responsive">
+                <table class="table table-striped table-hover">
                     <tr class="text-center bg-light">
                         <th>NO</th>
                         <th>Jurusan</th>

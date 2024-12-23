@@ -1,13 +1,17 @@
 <div class="col-md-12">
-            <div class="card card-outline card-info">
-              <div class="card-header">
+            <div class="card">
+              <div class="card-header d-flex">
                 <h3 class="card-title"><i class="fas fa-user"></i> <?= $subjudul ?></h3>
 
-                <div class="card-tools">
+                <div class="card-tools ms-auto">
                     <?php foreach($daftar_presensi as $key => $d){} ?>
-                        <a href="<?= base_url('DaftarPresensi/PrintDaftarPresensiKelas/' . $d['id_kelas']) ?>" target="_blank" class="btn btn-info btn-sm">
+                    <?php if ($d == '') {
+                        
+                    } else { ?>
+                        <a href="<?= base_url('DaftarPresensi/PrintDaftarPresensiKelas/' . $d['id_kelas']) ?>" target="_blank" class="btn btn-secondary btn-sm">
                             <i class="fas fa-print"></i> Print Presensi
-                        </a>   
+                        </a>
+                    <?php } ?>       
                 </div>
                 <!-- /.card-tools -->
               </div>

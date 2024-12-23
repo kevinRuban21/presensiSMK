@@ -17,7 +17,7 @@ class Jurusan extends BaseController
             'judul' => 'Master Data',
             'subjudul' => 'Jurusan',
             'menu' => 'master-data',
-            'submenu' => 'jurusan',
+            'submenu' => 'Data Jurusan',
             'page' => 'jurusan/v_index',
             'jurusan' => $this->ModelJurusan->AllData(),
         ];
@@ -28,52 +28,56 @@ class Jurusan extends BaseController
     {
         $data = [
             'judul' => 'Master Data',
-            'subjudul' => 'Input Data Jurusan',
+            'subjudul' => 'Jurusan',
             'menu' => 'master-data',
-            'submenu' => 'jurusan',
+            'submenu' => 'Input Jurusan',
             'page' => 'jurusan/v_input',
         ];
         return view('v_template', $data);
     }
 
     public function InsertData(){
-        if($this->validate([
+        $validate = $this->validate([
             'kode_jurusan' =>[
                 'label' => 'Kode Jurusan',
-                'rules' => 'required',
+                'rules' => 'required|is_unique[tbl_jurusan.kode_jurusan]',
                 'errors' => [
-                    'required' => '{field} Tidak Boleh Kosong',
+                    'required' => '{field} Tidak Boleh Kosong !!!',
+                    'is_unique' => '{field} ini Sudah ada !!!',   
                 ]
             ],
             'jurusan' =>[
                 'label' => 'Jurusan',
-                'rules' => 'required',
+                'rules' => 'required|is_unique[tbl_jurusan.jurusan]',
                 'errors' => [
-                    'required' => '{field} Tidak Boleh Kosong',
+                    'required' => '{field} Tidak Boleh Kosong !!!',
+                    'is_unique' => '{field} ini Sudah ada !!!',   
                 ]
-            ]
-        ])){
-            // jika Valid
-            $data = [
+            ],
+        ]);
+        
+        if(!$validate){
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+
+        $data = [
                 'kode_jurusan' => $this->request->getPost('kode_jurusan'),
                 'jurusan' => $this->request->getPost('jurusan'),
-            ];
-            $this->ModelJurusan->InsertData($data);
-            session()->setFlashdata('insert', 'Data Berhasil Ditambahkan');
-            return redirect()->to('Jurusan');
+        ];
+        $this->ModelJurusan->InsertData($data);
 
-        }else{
-            return redirect()->to('Jurusan/Input')->withInput();
-        }
     }
 
     public function Edit($id_jurusan)
     {
         $data = [
             'judul' => 'Master Data',
-            'subjudul' => 'Edit Data Jurusan',
+            'subjudul' => 'Jurusan',
             'menu' => 'master-data',
-            'submenu' => 'jurusan',
+            'submenu' => 'Edit Jurusan',
             'page' => 'jurusan/v_edit',
             'jurusan' => $this->ModelJurusan->DetailData($id_jurusan),
         ];
@@ -81,35 +85,36 @@ class Jurusan extends BaseController
     }
 
     public function UpdateData($id_jurusan){
-        if($this->validate([
+        $validate = $this->validate([
             'kode_jurusan' =>[
                 'label' => 'Kode Jurusan',
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} Tidak Boleh Kosong',
+                    'required' => '{field} Tidak Boleh Kosong !!!',   
                 ]
             ],
             'jurusan' =>[
                 'label' => 'Jurusan',
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} Tidak Boleh Kosong',
+                    'required' => '{field} Tidak Boleh Kosong !!!',   
                 ]
-            ]
-        ])){
-            // jika Valid
-            $data = [
-                'id_jurusan' => $id_jurusan,
-                'kode_jurusan' => $this->request->getPost('kode_jurusan'),
-                'jurusan' => $this->request->getPost('jurusan'),
-            ];
-            $this->ModelJurusan->UpdateData($data);
-            session()->setFlashdata('update', 'Data Berhasil Diubah');
-            return redirect()->to('Jurusan');
-
-        }else{
-            return redirect()->to('Jurusan/Input')->withInput();
+            ],
+        ]);
+        
+        if(!$validate){
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ]);
         }
+
+        $data = [
+            'id_jurusan' => $id_jurusan,
+            'kode_jurusan' => $this->request->getPost('kode_jurusan'),
+            'jurusan' => $this->request->getPost('jurusan'),
+        ];
+        $this->ModelJurusan->UpdateData($data);
     }
 
     public function DeleteData($id_jurusan){

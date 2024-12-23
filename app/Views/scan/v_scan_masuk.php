@@ -102,6 +102,7 @@
                                     <div class="col-md-12">
                                         <div class="singel-form">
                                             <button type="submit" id="tmbl" class="main-btn">Kirim</button>
+                                            <a href="<?= base_url() ?>" class="main-btn">Kembali</a>
                                         </div> <!-- singel form -->
                                         <div id="berhasil"></div>
                                     </div> 

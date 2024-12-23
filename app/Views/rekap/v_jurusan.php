@@ -1,7 +1,7 @@
 <div class="col-md-12">
-            <div class="card card-outline card-info">
+            <div class="card">
               <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-table"></i> Rekap Presensi</h3>
+                <h3 class="card-title">Rekap Presensi</h3>
 
                 
                 <!-- /.card-tools -->
@@ -37,12 +37,12 @@
 
 
           <div class="col-md-12">
-            <div class="card card-outline card-info">
-              <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-user"></i> <?= $subjudul ?></h3>
+            <div class="card">
+              <div class="card-header d-flex">
+                <h3 class="card-title"><?= $subjudul ?></h3>
 
-                <div class="card-tools">
-                    <a href="<?= base_url('DaftarPresensi/PrintDaftarPresensi') ?>" target="_blank" class="btn btn-info btn-sm">
+                <div class="card-tools ms-auto">
+                    <a href="<?= base_url('DaftarPresensi/PrintDaftarPresensi') ?>" target="_blank" class="btn btn-secondary btn-sm">
                         <i class="fas fa-print"></i> Print Presensi
                     </a>
                 </div>

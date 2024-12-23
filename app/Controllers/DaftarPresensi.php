@@ -43,6 +43,7 @@ class DaftarPresensi extends BaseController
             'page' => 'rekap/v_kelas',
             'jurusan' => $this->ModelJurusan->DetailData($id_jurusan),
             'kelas' => $this->ModelKelas->AllDataKelas($id_jurusan),
+            'siswa_blm' => $this->ModelKelas->SiswaBelum(),
         ];
         return view('v_template', $data);
     }

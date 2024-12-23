@@ -1,15 +1,13 @@
 <div class="col-md-12">
-            <div class="card card-outline card-info">
-              <div class="card-header">
+            <div class="card">
+              <div class="card-header d-flex">
                 <h3 class="card-title">
                     <?= $subjudul ?><br>
                     <small><span class="text-bold">Jurusan</span> : <?= $jurusan['jurusan'] ?></small>
                 </h3>
 
-                <div class="card-tools">
-                    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#add">
-                        <i class="fas fa-plus"></i> Tambah Data
-                    </button>
+                <div class="card-tools ms-auto">
+                    <a href="<?= base_url('Kelas/TmbhKelas/' . $jurusan['id_jurusan']) ?>" class="btn btn-secondary btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
                 </div>
                 <!-- /.card-tools -->
               </div>
@@ -59,7 +57,7 @@
                         </script>';
                     }
                 ?>
-                <table id="example1" class="table table-bordered table-striped">
+                <table class="display table table-striped table-hover" id="basic-datatables">
                     <thead>
                         <tr class="text-center bg-light">
                             <th>NO</th>
@@ -81,12 +79,12 @@
                                 <td class="text-center"><?= $no++; ?></td>
                                 <td class="text-center"><?= $d['kelas'] ?></td>
                                 <td class="text-center">
-                                    <span class="badge bg-success"><?= $jmlh ?></span><br>
+                                    <span class="badge bg-secondary"><?= $jmlh ?></span><br>
                                     <small><a href="<?= base_url('Kelas/RincianKelas/' . $d['id_kelas']) ?>" class="text-reset">Siswa</a></small>
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-warning btn-sm mr-2" data-toggle="modal" data-target="#edit<?= $d['id_kelas'] ?>"><i class="fas fa-pencil-alt"></i></button>
+                                        <a href="<?= base_url('Kelas/EditKelas/' . $jurusan['id_jurusan'] . '/'. $d['id_kelas']) ?>" class="btn btn-warning btn-sm me-2"><i class="icon-pencil"></i></a>
                                         <a href="<?= base_url('Kelas/DeleteData/' . $jurusan['id_jurusan'].'/'. $d['id_kelas']) ?>" onclick="return confirm('Yakin Ingin Menghapus Data Ini')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                     </div>
                                 </td>
@@ -103,79 +101,47 @@
           </div>
           <!-- /.col -->
 
-        <!--tmbah Data -->
-        <div class="modal fade" id="add">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h4 class="modal-title">Tambah <?= $subjudul ?></h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <?php echo form_open('Kelas/InsertData/'. $jurusan['id_jurusan']) ?>
-                <div class="modal-body">
 
-                    <div class="form-group">
-                        <label>Kelas</label>
-                        <input name="kelas" class="form-control" placeholder="Kelas" required>
-                    </div> 
-                </div>
-                <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-info">Simpan</button>
-                </div>
-                <?php echo form_close() ?>
-            </div>
-            <!-- /.modal-content -->
-            </div>
-        <!-- /.modal-dialog -->
-      </div>
+<script>
+    $(document).ready(function () {
+        $("#basic-datatables").DataTable({});
 
-    <!--edit Data -->
-    <?php foreach($kelas as $key => $d){ ?>
-        <div class="modal fade" id="edit<?=$d['id_kelas'] ?>">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h4 class="modal-title">Edit <?= $subjudul ?></h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <?php echo form_open('Kelas/UpdateData/' . $jurusan['id_jurusan'].'/'. $d['id_kelas'] ) ?>
-                <div class="modal-body">
+        $("#multi-filter-select").DataTable({
+          pageLength: 5,
+          initComplete: function () {
+            this.api()
+              .columns()
+              .every(function () {
+                var column = this;
+                var select = $(
+                  '<select class="form-select"><option value=""></option></select>'
+                )
+                  .appendTo($(column.footer()).empty())
+                  .on("change", function () {
+                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
 
-                <div class="form-group">
-                    <label>Kelas</label>
-                    <input name="kelas" value="<?= $d['kelas'] ?>" class="form-control" placeholder="Kelas" required>
-                </div>
-                
-                </div>
-                <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-info">Simpan</button>
-                </div>
-                <?php echo form_close() ?>
-            </div>
-            <!-- /.modal-content -->
-            </div>
-        <!-- /.modal-dialog -->
-      </div>
-                        
+                    column
+                      .search(val ? "^" + val + "$" : "", true, false)
+                      .draw();
+                  });
 
-    <?php } ?>
+                column
+                  .data()
+                  .unique()
+                  .sort()
+                  .each(function (d, j) {
+                    select.append(
+                      '<option value="' + d + '">' + d + "</option>"
+                    );
+                  });
+              });
+          },
+        });
 
-
-        <script>
-            $(function () {
-                $("#example1").DataTable({
-                "paging": true,
-                "searching": true,
-                "responsive": true, 
-                "lengthChange": true, 
-                "autoWidth": false,
-                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            });
-        </script>
+        // Add Row
+        $("#add-row").DataTable({
+          pageLength: 5,
+        });
+    });
+</script>
         

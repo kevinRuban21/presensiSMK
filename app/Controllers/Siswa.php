@@ -28,7 +28,7 @@ class Siswa extends BaseController
             'judul' => 'Master Data',
             'subjudul' => 'Siswa',
             'menu' => 'master-data',
-            'submenu' => 'siswa',
+            'submenu' => 'Data Siswa',
             'page' => 'siswa/v_index',
             'siswa' => $this->ModelSiswa->AllData(),
         ];
@@ -39,9 +39,9 @@ class Siswa extends BaseController
     {
         $data = [
             'judul' => 'Master Data',
-            'subjudul' => 'Input Data Siswa',
+            'subjudul' => 'Siswa',
             'menu' => 'master-data',
-            'submenu' => 'siswa',
+            'submenu' => 'Input Siswa',
             'page' => 'siswa/v_input',
             'jurusan' => $this->ModelJurusan->AllData(),
             'siswa' => $this->ModelSiswa->AllData(),
@@ -121,8 +121,6 @@ class Siswa extends BaseController
             'id_jurusan' => $this->request->getPost('id_jurusan'),
         ];
         $this->ModelSiswa->InsertData($data);
-        session()->setFlashdata('insert', 'Data Berhasil Ditambahkan');
-        return redirect()->to('Siswa');
 
     }
 
@@ -159,9 +157,9 @@ class Siswa extends BaseController
     {
         $data = [
             'judul' => 'Master Data',
-            'subjudul' => 'Edit Data Siswa',
+            'subjudul' => 'Siswa',
             'menu' => 'master-data',
-            'submenu' => 'siswa',
+            'submenu' => 'Edit siswa',
             'page' => 'siswa/v_edit',
             'siswa' => $this->ModelSiswa->DetailData($id_siswa),
         ];
@@ -176,7 +174,7 @@ class Siswa extends BaseController
         $telp_ortu = $this->request->getPost('telp_ortu');
         $nipd = $this->request->getPost('nipd');
         
-        if($this->validate([
+        $validate = $this->validate([
             'nipd' =>[
                 'label' => 'NIPD',
                 'rules' => 'required',
@@ -195,40 +193,42 @@ class Siswa extends BaseController
                 'label' => 'Nama Siswa',
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} Tidak Boleh Kosong',
+                    'required' => '{field} Tidak Boleh Kosong !!!',  
                 ]
             ],
             'nama_ortu' =>[
                 'label' => 'Nama Orang Tua',
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} Tidak Boleh Kosong',
+                    'required' => '{field} Tidak Boleh Kosong !!!',  
                 ]
             ],
             'telp_ortu' =>[
-                'label' => 'No Telepon Orang Tua',
+                'label' => 'No Telpon Orang Tua',
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} Tidak Boleh Kosong',
+                    'required' => '{field} Tidak Boleh Kosong !!!',  
                 ]
             ],
-        ])){
-            $data = [
-                'id_siswa' => $id_siswa,
-                'nipd' => $nipd,
-                'nisn' => $nisn,
-                'nama_siswa' => $nama_siswa,
-                'nama_ortu' => $nama_ortu,
-                'telp_ortu' => $telp_ortu,
-            ];
-            
-            $this->ModelSiswa->UpdateData($data);
-            session()->setFlashdata('update', 'Data Berhasil Diubah');
-            return redirect()->to('Siswa');
+        ]);
 
-        }else{
-            return redirect()->to('Siswa/Edit/' . $id_siswa)->withInput();
+        if(!$validate){
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ]);
         }
+
+        $data = [
+            'id_siswa' => $id_siswa,
+            'nipd' => $nipd,
+            'nisn' => $nisn,
+            'nama_siswa' => $nama_siswa,
+            'nama_ortu' => $nama_ortu,
+            'telp_ortu' => $telp_ortu,
+        ];
+            
+        $this->ModelSiswa->UpdateData($data);
     }
 
     public function DeleteData($id_siswa){

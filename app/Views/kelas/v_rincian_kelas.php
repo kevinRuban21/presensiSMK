@@ -1,21 +1,18 @@
 <div class="col-md-12">
-            <div class="card card-outline card-info">
-              <div class="card-header">
+            <div class="card">
+              <div class="card-header d-flex">
                 <h3 class="card-title">
-                    <?= $subjudul ?><br>
+                    <?= $submenu ?>
                 </h3>
 
-                <div class="card-tools">
-                    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#add">
-                        <i class="fas fa-plus"></i> Tambah Data
-                    </button>
+                <div class="card-tools ms-auto">
                 </div>
                 <!-- /.card-tools -->
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
+              <div class="card-body table-responsive">
 
-              <table class="table table-borderless table-sm">
+                <table>
                     <tr>
                         <th width='150px'>Kelas</th>
                         <td width='10px'>:</td>
@@ -31,19 +28,6 @@
 
                     use CodeIgniter\Database\BaseUtils;
 
-                    if(session()->get('insert')){
-                        echo '<div class="alert alert-info">';
-                        echo session()->get('insert');
-                        echo '</div>';
-                        echo '<script>
-                            $(document).ready(function(){
-                                $(".alert").fadeIn();
-                                setTimeout(function(){
-                                    $(".alert").fadeOut();
-                                }, 3000);
-                            });
-                        </script>';
-                    }
                     if(session()->get('update')){
                         echo '<div class="alert alert-info">';
                         echo session()->get('update');
@@ -71,52 +55,9 @@
                         </script>';
                     }
                 ?>
-                <table id="example2" class="table table-bordered">
-                    <tr class="text-center bg-light">
-                        <th>NO</th>
-                        <th>NIPD</th>
-                        <th>NISN</th>
-                        <th>Nama Siswa</th> 
-                        <th>Aksi</th>
-                    </tr>
-                    <?php $no=1; foreach($siswa as $key => $d){ ?>
-                        <tr>
-                            <td class="text-center"><?= $no++; ?></td>
-                            <td><?= $d['nipd'] ?></td>
-                            <td><?= $d['nisn'] ?></td>
-                            <td><?= $d['nama_siswa'] ?></td>
-                            <td class="text-center">
-                                <div class="btn-group">
-                                    <a href="<?= base_url('Kelas/HpsSiswa/' . $d['id_siswa'].'/'. $kelas['id_kelas']) ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
-                                </div>
-                            </td>
 
-                        </tr>
-
-                    <?php } ?>
-                </table>
-               
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-
-
-           <!--tmbah Data -->
-        <div class="modal fade" id="add">
-            <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h4 class="modal-title">Siswa</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <?php echo form_open() ?>
-                <div class="modal-body">
-                    <table id="example1" class="table table-bordered table-striped">
+                <?php if ($siswa_blm == true) { ?>
+                    <table class="table table-bordered table-striped">
                         <thead>
                             <tr class="text-center bg-info">
                                 <th>NO</th>
@@ -148,43 +89,106 @@
                                 <?php }?>
                             <?php } ?>
                         </tbody>
-                    </table>   
-                </div>
-                <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-                <?php echo form_close() ?>
+                    </table> <br>
+                    <table class="display table table-striped table-hover" id="basic-datatables">
+                        <tr class="text-center bg-light">
+                            <th>#</th>
+                            <th>NIPD</th>
+                            <th>NISN</th>
+                            <th>Nama Siswa</th> 
+                            <th>Aksi</th>
+                        </tr>
+                        <?php $no=1; foreach($siswa as $key => $d){ ?>
+                            <tr>
+                                <td class="text-center"><?= $no++; ?></td>
+                                <td><?= $d['nipd'] ?></td>
+                                <td><?= $d['nisn'] ?></td>
+                                <td><?= $d['nama_siswa'] ?></td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <a href="<?= base_url('Kelas/HpsSiswa/' . $d['id_siswa'].'/'. $kelas['id_kelas']) ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </table>
+                <?php } else { ?>
+                    <table class="display table table-striped table-hover" id="basic-datatables">
+                        <tr class="text-center bg-light">
+                            <th>#</th>
+                            <th>NIPD</th>
+                            <th>NISN</th>
+                            <th>Nama Siswa</th> 
+                            <th>Aksi</th>
+                        </tr>
+                        <?php $no=1; foreach($siswa as $key => $d){ ?>
+                            <tr>
+                                <td class="text-center"><?= $no++; ?></td>
+                                <td><?= $d['nipd'] ?></td>
+                                <td><?= $d['nisn'] ?></td>
+                                <td><?= $d['nama_siswa'] ?></td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <a href="<?= base_url('Kelas/HpsSiswa/' . $d['id_siswa'].'/'. $kelas['id_kelas']) ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </table>
+                <?php } ?>
+               
+              </div>
+              <!-- /.card-body -->
             </div>
-            <!-- /.modal-content -->
-            </div>
-        <!-- /.modal-dialog -->
-      </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
 
 
-      <script>
-            $(function () {
-                $("#example1").DataTable({
-                "paging": true,
-                "searching": true,
-                "responsive": true, 
-                "lengthChange": true, 
-                "autoWidth": false,
-                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            });
-        </script>
 
+<script>
+    $(document).ready(function () {
+        $("#basic-datatables").DataTable({});
 
-        <script>
-            $(function () {
-                $("#example2").DataTable({
-                "paging": true,
-                "searching": true,
-                "responsive": true, 
-                "lengthChange": true, 
-                "autoWidth": false,
-                }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
-            });
-        </script>
+        $("#multi-filter-select").DataTable({
+          pageLength: 5,
+          initComplete: function () {
+            this.api()
+              .columns()
+              .every(function () {
+                var column = this;
+                var select = $(
+                  '<select class="form-select"><option value=""></option></select>'
+                )
+                  .appendTo($(column.footer()).empty())
+                  .on("change", function () {
+                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                    column
+                      .search(val ? "^" + val + "$" : "", true, false)
+                      .draw();
+                  });
+
+                column
+                  .data()
+                  .unique()
+                  .sort()
+                  .each(function (d, j) {
+                    select.append(
+                      '<option value="' + d + '">' + d + "</option>"
+                    );
+                  });
+              });
+          },
+        });
+
+        // Add Row
+        $("#add-row").DataTable({
+          pageLength: 5,
+        });
+    });
+</script>
+
         
 
     

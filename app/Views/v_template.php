@@ -1,261 +1,364 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Presensi SMK Kasih Theresia | <?= $judul ?></title>
+  <head>
+  <?php 
+        $db = \Config\Database::connect();
+        $web = $db->table('tbl_sekolah')->where('id', 1)->get()->getRowArray();
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="<?=base_url('AdminLTE')?>/plugins/summernote/summernote-bs4.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="<?= base_url('AdminLTE')?>/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="<?= base_url('AdminLTE')?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="<?= base_url('AdminLTE')?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <!-- Favicon -->
-  <link rel="icon" href="<?= base_url() ?>/logo2.png" type="image/gif">
+    ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Presensi <?= $web['nama_sekolah'] ?> | <?= $judul ?></title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
 
-<!-- jQuery -->
-<script src="<?=base_url('AdminLTE')?>/plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="<?=base_url('AdminLTE')?>/plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="<?=base_url('AdminLTE')?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="<?=base_url('AdminLTE')?>/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="<?=base_url('AdminLTE')?>/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="<?=base_url('AdminLTE')?>/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="<?=base_url('AdminLTE')?>/plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="<?=base_url('AdminLTE')?>/plugins/moment/moment.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="<?=base_url('AdminLTE')?>/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="<?=base_url('AdminLTE')?>/plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="<?=base_url('AdminLTE')?>/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="<?=base_url('AdminLTE')?>/dist/js/adminlte.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?=base_url('AdminLTE')?>/dist/js/pages/dashboard.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/jszip/jszip.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="<?=base_url('AdminLTE')?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<!-- Ajax -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Fonts and icons -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["<?= base_url('dashboard-template') ?>/assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
 
-<script>
-  $(function () {
-    $("#example1").DataTable({
-        "paging": true,
-        "searching": true,
-        "responsive": true, 
-        "lengthChange": true, 
-        "autoWidth": false,
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-  });
-</script>
+    <!-- Ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- Favicon -->
+    <link rel="icon" href="<?= base_url() ?>/logo2.png" type="image/gif">
 
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="<?= base_url('dashboard-template') ?>/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= base_url('dashboard-template') ?>/assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="<?= base_url('dashboard-template') ?>/assets/css/kaiadmin.min.css" />
 
-
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-info elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="<?=base_url('logo2.png')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">E-Presensi</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="<?=base_url('foto_user.webp')?>" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Kevin Ruban</a>
-          <span class="badge bg-success">Online</span><br>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="<?= base_url('dashboard-template') ?>/assets/css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="dark">
+            <a href="#" class="logo text-light text-center">
+              E-Presensi
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
             </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+              <li class="nav-item <?= $menu == 'dashboard' ? 'active' : ''  ?>"">
+                <a
+                  href="<?= base_url('Dashboard') ?>"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item <?= $menu == 'master-data' ? 'active' : ''  ?>">
+                <a data-bs-toggle="collapse" href="#base">
+                  <i class="fas fa-layer-group"></i>
+                  <p>Master Data</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse <?= $menu == 'master-data' ? 'show' : ''  ?>" id="base">
+                  <ul class="nav nav-collapse">
+                    <li class="<?= $subjudul == 'Jurusan' ? 'active' : ''  ?>">
+                      <a href="<?= base_url('Jurusan') ?>">
+                        <span class="sub-item">Jurusan</span>
+                      </a>
+                    </li>
+                    <li class="<?= $subjudul == 'Kelas' ? 'active' : ''  ?>">
+                      <a href="<?= base_url('Kelas') ?>">
+                        <span class="sub-item">Kelas</span>
+                      </a>
+                    </li>
+                    <li class="<?= $subjudul == 'Siswa' ? 'active' : ''  ?>">
+                      <a href="<?= base_url('Siswa') ?>">
+                        <span class="sub-item">Siswa</span>
+                      </a>
+                    </li>
+                    <li class="<?= $subjudul == 'Daftar Presensi' ? 'active' : ''  ?>">
+                      <a href="<?= base_url('DaftarPresensi') ?>">
+                        <span class="sub-item">Daftar Presensi</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item <?= $menu == 'setting' ? 'active' : ''  ?>">
+                <a data-bs-toggle="collapse" href="#sidebarLayouts">
+                <i class="icon-settings"></i>
+                  <p>Setting</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse <?= $menu == 'setting' ? 'show' : ''  ?>" id="sidebarLayouts">
+                  <ul class="nav nav-collapse">
+                    <li class="<?= $subjudul == 'Sekolah' ? 'active' : ''  ?>">
+                      <a href="<?= base_url('Setting/Sekolah') ?>">
+                        <span class="sub-item">Sekolah</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+      <!-- End Sidebar -->
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-              <a href="<?= base_url('Dashboard') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : ''  ?>">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Dasboard</p>
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+              <a href="#" class="logo">
+                <img src="<?= base_url() ?>/logo2.png" alt="Logo" width="50">
+                E-Presensi
               </a>
-          </li>
-          <li class="nav-item <?= $menu == 'master-data' ? 'menu-open' : ''  ?>">
-            <a href="#" class="nav-link <?= $menu == 'master-data' ? 'active' : ''  ?>">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Master Data
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?= base_url('Jurusan') ?>" class="nav-link <?= $submenu == 'jurusan' ? 'active' : ''  ?>">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Jurusan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('Siswa') ?>" class="nav-link <?= $submenu == 'siswa' ? 'active' : ''  ?>">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Siswa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('Kelas') ?>" class="nav-link <?= $submenu == 'kelas' ? 'active' : ''  ?>">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelas</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('DaftarPresensi') ?>" class="nav-link <?= $submenu == 'daftar-presensi' ? 'active' : ''  ?>">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Daftar Presensi</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item <?= $menu == 'setting' ? 'menu-open' : ''  ?>">
-            <a href="#" class="nav-link <?= $menu == 'setting' ? 'active' : ''  ?>">
-              <i class="nav-icon fas fa-cog"></i>
-              <p>
-                Setting
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?= base_url('Setting/Sekolah') ?>" class="nav-link <?= $submenu == 'sekolah' ? 'active' : ''  ?>">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sekolah</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+              <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                  <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                  <i class="gg-menu-left"></i>
+                </button>
+              </div>
+              <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+              </button>
+            </div>
+            <!-- End Logo Header -->
+          </div>
+          <!-- Navbar Header -->
+          <nav
+            class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom"
+          >
+            <div class="container-fluid">
+              <nav
+                class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
+              >
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-search pe-1">
+                      <i class="fa fa-search search-icon"></i>
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Search ..."
+                    class="form-control"
+                  />
+                </div>
+              </nav>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0"><?= $judul ?></h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#"><?= $judul ?></a></li>
-              <li class="breadcrumb-item active"><?= $subjudul ?></li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+              <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                <li
+                  class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none"
+                >
+                  <a
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-search animated fadeIn">
+                    <form class="navbar-left navbar-form nav-search">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          placeholder="Search ..."
+                          class="form-control"
+                        />
+                      </div>
+                    </form>
+                  </ul>
+                </li>
 
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-            <?php if ($page){
-                echo view($page);
-            }?>
+                <li class="nav-item topbar-user dropdown hidden-caret">
+                  <a
+                    class="dropdown-toggle profile-pic"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    aria-expanded="false"
+                  >
+                    <div class="avatar avatar-online">
+                      <img
+                        src="<?= base_url() ?>/foto_user.webp"
+                        alt="..."
+                        class="avatar-img rounded-circle"
+                      />
+                    </div>
+                    <span class="profile-username">
+                      <span class="fw-bold">Kevin Ruban</span>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-user animated fadeIn">
+                    <div class="dropdown-user-scroll scrollbar-outer">
+                      <li>
+                        <div class="user-box">
+                          <div class="avatar-lg">
+                            <img
+                              src="<?= base_url() ?>/foto_user.webp"
+                              alt="image profile"
+                              class="avatar-img rounded"
+                            />
+                          </div>
+                          <div class="u-text">
+                            <h4>Kevin Ruban</h4>
+                            <p class="text-muted">Admin</p>
+                            <a
+                              href="profile.html"
+                              class="btn btn-xs btn-secondary btn-sm"
+                              >View Profile</a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?= base_url('Auth/Logout') ?>"><i class="icon-logout"></i> Logout</a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- End Navbar -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+
+        <div class="container">
+          <div class="page-inner">
+          <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
+            <div>
+                <h3 class="fw-bold mb-3"><?= $judul ?></h3>
+            </div>
+            <div class="ms-md-auto py-2 py-md-0">
+                <h6 class="op-7 mb-2">
+                    <i class="icon-home"></i>
+                    <i class="icon-arrow-right"></i>
+                    <?= $subjudul ?>
+                    <i class="icon-arrow-right"></i>
+                    <?= $submenu ?>
+                </h6>
+            </div>
+        </div>
+            <?php if ($page){
+              echo view($page);
+            }?>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <div class="copyright">
+              2024, made with <i class="fa fa-heart heart text-danger"></i> by
+              <a href="#"><?= $web['nama_sekolah'] ?></a>
+            </div>
+            <div>
+              Version 1.0.0
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      
     </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+    <!--   Core JS Files   -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/core/popper.min.js"></script>
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/core/bootstrap.min.js"></script>
 
+    <!-- jQuery Scrollbar -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
-    <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
-    </div>
-  </footer>
+    <!-- Chart JS -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/chart.js/chart.min.js"></script>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-</body>
+    <!-- jQuery Sparkline -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/jsvectormap/world.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Kaiadmin JS -->
+    <script src="<?= base_url('dashboard-template') ?>/assets/js/kaiadmin.min.js"></script>
+
+    <script>
+      $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+        type: "line",
+        height: "70",
+        width: "100%",
+        lineWidth: "2",
+        lineColor: "#177dff",
+        fillColor: "rgba(23, 125, 255, 0.14)",
+      });
+
+      $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+        type: "line",
+        height: "70",
+        width: "100%",
+        lineWidth: "2",
+        lineColor: "#f3545d",
+        fillColor: "rgba(243, 84, 93, .14)",
+      });
+
+      $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+        type: "line",
+        height: "70",
+        width: "100%",
+        lineWidth: "2",
+        lineColor: "#ffa534",
+        fillColor: "rgba(255, 165, 52, .14)",
+      });
+    </script>
+  </body>
 </html>

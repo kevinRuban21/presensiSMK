@@ -24,6 +24,39 @@ class Setting extends BaseController
         return view('v_template', $data);
     }
 
+    public function UpdateData(){
+        $validate = $this->validate([
+            'nama_sekolah' =>[
+                'label' => 'Nama Sekolah',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Tidak Boleh Kosong !!!',   
+                ]
+            ],
+            'kepsek' =>[
+                'label' => 'Kepala Sekolah',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Tidak Boleh Kosong !!!',   
+                ]
+            ],
+        ]);
+        
+        if(!$validate){
+            return $this->response->setJSON([
+                'status' => 'error',
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+
+        $data = [
+            'id' => 1,
+            'nama_sekolah' => $this->request->getPost('nama_sekolah'),
+            'kepsek' => $this->request->getPost('kepsek'),
+        ];
+        $this->ModelSekolah->UpdateData($data);
+    }
+
     
     
 }
