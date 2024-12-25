@@ -186,21 +186,21 @@
                     }
                 });
             });
-            function checkForm() {
-                let button = $('#tmbl');
-                var isFormValid = true;
-                $('#scan_masuk').each(function() {
-                    if ($(this).val() === '') {
-                        isFormValid = false;
-                        return false;
-                    }
-                });
+            // function checkForm() {
+            //     let button = $('#tmbl');
+            //     var isFormValid = true;
+            //     $('#scan_masuk').each(function() {
+            //         if ($(this).val() === '') {
+            //             isFormValid = false;
+            //             return false;
+            //         }
+            //     });
 
-                if (isFormValid) {
-                    button.click();
-                }
-            }
-            $('#scan_masuk').on('input', checkForm);
+            //     if (isFormValid) {
+            //         button.click();
+            //     }
+            // }
+            // $('#scan_masuk').on('input', checkForm);
         });
 
         function presensi(){

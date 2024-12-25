@@ -17,4 +17,14 @@ class ModelAdmin extends Model
     public function JmlhKelas(){
         return $this->db->table('tbl_kelas')->countAll();
     }
+
+    public function DetailData()
+    {
+        return $this->db->table('tbl_admin')->where('id_admin', 1)->get()->getRowArray();
+    }
+
+    public function UpdateData($data)
+    {
+        $this->db->table('tbl_admin')->where('id_admin', $data['id_admin'])->update($data);
+    }
 }

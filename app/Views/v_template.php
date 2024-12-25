@@ -5,6 +5,7 @@
   <?php 
         $db = \Config\Database::connect();
         $web = $db->table('tbl_sekolah')->where('id', 1)->get()->getRowArray();
+        $admin = $db->table('tbl_admin')->where('id_admin', 1)->get()->getRowArray();
 
     ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -218,13 +219,13 @@
                   >
                     <div class="avatar avatar-online">
                       <img
-                        src="<?= base_url() ?>/foto_user.webp"
+                        src="<?= base_url('foto_profil/' . $admin['foto']) ?>"
                         alt="..."
                         class="avatar-img rounded-circle"
                       />
                     </div>
                     <span class="profile-username">
-                      <span class="fw-bold">Kevin Ruban</span>
+                      <span class="fw-bold"><?= $admin['username'] ?></span>
                     </span>
                   </a>
                   <ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -233,16 +234,16 @@
                         <div class="user-box">
                           <div class="avatar-lg">
                             <img
-                              src="<?= base_url() ?>/foto_user.webp"
+                              src="<?= base_url('foto_profil/' . $admin['foto']) ?>"
                               alt="image profile"
                               class="avatar-img rounded"
                             />
                           </div>
                           <div class="u-text">
-                            <h4>Kevin Ruban</h4>
+                            <h4><?= $admin['username'] ?></h4>
                             <p class="text-muted">Admin</p>
                             <a
-                              href="profile.html"
+                              href="<?= base_url('ProfileAdmin') ?>"
                               class="btn btn-xs btn-secondary btn-sm"
                               >View Profile</a
                             >

@@ -61,7 +61,7 @@ class PresensiMasuk extends BaseController
             'jam_masuk' => date('H:i:s'),
         ]; 
         $this->ModelScanMasuk->InsertData($data);
-        return redirect()->to('PresensiMasuk');
-        // return redirect()->to('KirimPesan/PesanWa');
+        // return redirect()->to('PresensiMasuk');
+        return redirect()->to('KirimPesan/PesanWa/' . $id_siswa);
     }
 }

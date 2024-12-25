@@ -95,6 +95,7 @@ class Filters extends BaseFilters
                     'DaftarPresensi', 'DaftarPresensi/*',
                     'PresensiMasuk', 'PresensiMasuk/*',
                     'PresensiPulang', 'PresensiPulang/*',
+                    'ProfileAdmin', 'ProfileAdmin/*',
                 ]
             ],
         ],

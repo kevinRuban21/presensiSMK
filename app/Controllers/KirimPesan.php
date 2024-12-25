@@ -15,11 +15,11 @@ class KirimPesan extends BaseController
         $this->ModelScanMasuk = new ModelScanMasuk();
     }
 
-    public function PesanWa()
+    public function PesanWa($id_siswa)
     {
-        $siswa = $this->ModelScanMasuk->AllData();
-        foreach($siswa as $siswa){
-            $pesan = 'Selamat Pagi Bpk/Ibu '. $siswa['nama_ortu'] . ' Anak anda ' . $siswa['nama_siswa'] . ' Telah sampai di sekolah pada ' . $siswa['jam_masuk'] . ' Terimah Kasih';
+        $siswa = $this->ModelScanMasuk->AllDataSiswa($id_siswa);
+        foreach($siswa as $s){
+            $pesan = 'Selamat Pagi Bpk/Ibu '. $s['nama_ortu'] . ' Anak anda ' . $s['nama_siswa'] . ' Telah sampai di sekolah pada ' . $s['jam_masuk'] . ' Terimah Kasih';
             $curl = curl_init();
                 curl_setopt_array($curl, array(
                 CURLOPT_URL => 'https://api.fonnte.com/send',
@@ -31,10 +31,10 @@ class KirimPesan extends BaseController
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => 'POST',
                 CURLOPT_POSTFIELDS => array(
-                'target' => $siswa['telp_ortu'],
-                'message' => $pesan,
-                'delay' => '2',
-                'countryCode' => '62',
+                    'target' => $s['telp_ortu'],
+                    'message' => $pesan,
+                    'delay' => '2',
+                    'countryCode' => '62',
                 ),
                 CURLOPT_HTTPHEADER => array(
                     'Authorization: iecAvJaJFr9jSaywLQQK'
