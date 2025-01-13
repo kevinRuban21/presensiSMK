@@ -1,7 +1,9 @@
 <div class="col-md-12">
             <div class="card">
               <div class="card-header d-flex">
-                <h3 class="card-title"><i class="fas fa-user"></i> <?= $subjudul ?></h3>
+                <h3 class="card-title">
+                    <i class="fas fa-user"></i> <?= $subjudul ?>
+                </h3>
 
                 <div class="card-tools ms-auto">
                     <?php foreach($daftar_presensi as $key => $d){} ?>

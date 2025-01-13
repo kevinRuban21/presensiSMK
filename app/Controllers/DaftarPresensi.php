@@ -81,5 +81,24 @@ class DaftarPresensi extends BaseController
         return view('rekap/v_print_presensi_kelas', $data);
     }
 
+    public function FilterData()
+    {
+        $tgl_presensi = $this->request->getPost('tanggal');
+        $data_filter = $this->ModelScanMasuk->DataFilter($tgl_presensi);
+
+        $data = [
+            'judul' => 'Master Data',
+            'subjudul' => 'Daftar Presensi',
+            'menu' => 'master-data',
+            'submenu' => 'daftar-presensi',
+            'page' => 'rekap/v_rekap_tanggal',
+            'daftar_presensi' => $data_filter,
+            'jurusan' => $this->ModelJurusan->AllData(),
+            'kelas' => $this->ModelKelas->AllData(),
+            'siswa' => $this->ModelSiswa->AllData(),
+        ];
+        return view('v_template', $data);
+    }
+
     
 }

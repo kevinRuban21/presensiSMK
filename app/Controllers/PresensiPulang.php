@@ -56,6 +56,6 @@ class PresensiPulang extends BaseController
         ]; 
         $this->ModelScanMasuk->UpdateData($data);
         return redirect()->to('PresensiPulang');
-        // return redirect()->to('KirimPesan/PesanWaPulang');
+        // return redirect()->to('KirimPesan/PesanWaPulang/' . $id_siswa);
     }
 }

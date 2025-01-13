@@ -186,21 +186,21 @@
                     }
                 });
             });
-            function checkForm() {
-                let button = $('#tmbl');
-                var isFormValid = true;
-                $('#scan_pulang').each(function() {
-                    if ($(this).val() === '') {
-                        isFormValid = false;
-                        return false;
-                    }
-                });
+            // function checkForm() {
+            //     let button = $('#tmbl');
+            //     var isFormValid = true;
+            //     $('#scan_pulang').each(function() {
+            //         if ($(this).val() === '') {
+            //             isFormValid = false;
+            //             return false;
+            //         }
+            //     });
 
-                if (isFormValid) {
-                    button.click();
-                }
-            }
-            $('#scan_pulang').on('input', checkForm);
+            //     if (isFormValid) {
+            //         button.click();
+            //     }
+            // }
+            // $('#scan_pulang').on('input', checkForm);
         });
 
         function presensi(){

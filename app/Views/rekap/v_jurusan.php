@@ -38,14 +38,28 @@
 
           <div class="col-md-12">
             <div class="card">
-              <div class="card-header d-flex">
-                <h3 class="card-title"><?= $subjudul ?></h3>
-
-                <div class="card-tools ms-auto">
-                    <a href="<?= base_url('DaftarPresensi/PrintDaftarPresensi') ?>" target="_blank" class="btn btn-secondary btn-sm">
-                        <i class="fas fa-print"></i> Print Presensi
-                    </a>
+              <div class="card-header">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="card-title"><?= $subjudul ?></h3>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-5 mt-2">
+                        <form action="<?= base_url('DaftarPresensi/FilterData') ?>" method="post">
+                            <input type="date" name="tanggal" id="tanggal" class="form-control">
+                            <button type="submit" class="btn btn-primary btn-sm mt-2">Filter Data</button>
+                        </form>   
+                    </div>
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 mt-2">
+                        <div class="card-tools ms-auto">
+                            <a href="<?= base_url('DaftarPresensi/PrintDaftarPresensi') ?>" target="_blank" class="btn btn-secondary btn-sm">
+                                <i class="fas fa-print"></i> Print Presensi
+                            </a>
+                        </div>
+                    </div>
+                </div>     
                 <!-- /.card-tools -->
               </div>
               <!-- /.card-header -->
@@ -66,10 +80,21 @@
                     <tbody>
                         <?php 
                             $no=1; foreach($daftar_presensi as $key => $d){
+                            $tglpresensi = date('d F Y', strtotime($d['tgl_presensi']));
+                            $angka = date('l', strtotime($d['tgl_presensi']));
+                            $hari = [
+                                'Monday' => 'Senin',
+                                'Tuesday' => 'Selasa',
+                                'Wednesday' => 'Rabu',
+                                'Thursday' => 'Kamis',
+                                'Friday' => 'Jumat',
+                                'Saturday' => 'Sabtu',
+                                'Sunday' => 'Minggu',
+                            ];
                         ?>
                             <tr>
                                 <td class="text-center"><?= $no++; ?></td>
-                                <td class="text-center"><?= $d['tgl_presensi'] ?></td>
+                                <td class="text-center"><?= $hari[$angka] ?>, <?= $tglpresensi ?></td>
                                 <td class="text-center"><?= $d['jam_masuk'] ?></td>
                                 <td class="text-center"><?= $d['jam_pulang'] ?></td>
                                 <td class="text-center"><?= $d['nipd'] ?></td>

@@ -55,9 +55,9 @@ class KirimPesan extends BaseController
         return redirect()->to('PresensiMasuk');
     }
 
-    public function PesanWaPulang()
+    public function PesanWaPulang($id_siswa)
     {
-        $siswa = $this->ModelScanMasuk->AllData();
+        $siswa = $this->ModelScanMasuk->AllDataSiswa($id_siswa);
         foreach($siswa as $siswa){
             $pesan = 'Selamat Sore Bpk/Ibu '. $siswa['nama_ortu'] . ' Anak anda ' . $siswa['nama_siswa'] . ' Telah pulang dari sekolah pada ' . $siswa['jam_pulang'] . ' Terimah Kasih';
             $curl = curl_init();

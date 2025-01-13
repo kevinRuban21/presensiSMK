@@ -55,6 +55,16 @@ class ModelScanMasuk extends Model
             ->get()->getResultArray();
     }
 
+    public function DataFilter($tgl_presensi)
+    {
+        return $this->db->table('presensi')
+            ->join('tbl_siswa', 'tbl_siswa.id_siswa = presensi.id_siswa')
+            ->join('tbl_kelas', 'tbl_siswa.id_kelas = tbl_kelas.id_kelas')
+            ->join('tbl_jurusan', 'tbl_siswa.id_jurusan = tbl_jurusan.id_jurusan')
+            ->where('tgl_presensi', $tgl_presensi)
+            ->get()->getResultArray();
+    }
+
     public function AllDataSiswa($id_siswa)
     {
         return $this->db->table('presensi')
